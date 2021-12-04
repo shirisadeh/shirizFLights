@@ -1,0 +1,34 @@
+[
+  {
+    "flightId": 1,
+    "airplane": "737-800",
+    "destination": "BKK",
+    "origin": "TLV",
+    "departure": "2022-01-13T07:00+0200",
+    "duration": 6
+  },
+  {
+    "flightId": 2,
+    "airplane": "787-900",
+    "destination": "JFK",
+    "origin": "TLV",
+    "departure": "2022-03-13T09:00+0200",
+    "duration": 12
+  },
+  {
+    "flightId": 3,
+    "airplane": "737-800",
+    "destination": "FCO",
+    "origin": "TLV",
+    "departure": "2022-02-05T14:30+0200",
+    "duration": 6
+  },
+  {
+    "flightId": 4,
+    "airplane": "777-300",
+    "destination": "MIA",
+    "origin": "TLV",
+    "departure": "2022-06-05T22:15+0300",
+    "duration": 14
+  }
+]
