@@ -1,5 +1,6 @@
 //importing express from express
 const Express = require("express");
+const { flightController } = require("./controllers/flightsController");
 
 // init the express app
 const app = Express();
@@ -16,4 +17,7 @@ app.get("/", (req, res) => {
   res.json("Welcome to Shiriz server");
 });
 
-app.listen(port, () => console.log(`Server is listeing on port ${port}`));
+app.get("/api/flights", flightController.getAllFlights);
+app.get("/api/flights/:flightId", flightController.getFlightById);
+
+app.listen(port, () => console.log(`Server is listening on port ${port}`));

@@ -1,8 +1,16 @@
 const flights = require("./flights.json");
 
+function isFlightValid(flight) {
+  return true;
+}
+
 //create flight
 function createFlight(flight) {
-  flights.push(flight);
+  if (isFlightValid(flight)) {
+    flights.push(flight);
+  } else {
+    throw new Error("Invalid Flight!");
+  }
 }
 
 // update flight
@@ -17,7 +25,7 @@ function getAllFlights() {
 
 //read single flight
 function getFlightById(id) {
-  console.log(flights[_getFlightIndexById]);
+  return flights[_getFlightIndexById(id)];
 }
 
 // delete flight
@@ -35,13 +43,13 @@ function _getFlightIndexById(id) {
   }
 }
 
-module.exports({
+module.exports = {
   createFlight,
   updateFlight,
   getAllFlights,
   getFlightById,
   deleteFlight,
-});
+};
 
 /*
 deleteFlight({
