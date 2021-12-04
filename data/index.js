@@ -7,6 +7,7 @@ function isFlightValid(flight) {
 //create flight
 function createFlight(flight) {
   if (isFlightValid(flight)) {
+    console.log(flight);
     flights.push(flight);
   } else {
     throw new Error("Invalid Flight!");
@@ -29,8 +30,8 @@ function getFlightById(id) {
 }
 
 // delete flight
-function deleteFlight(flight) {
-  flights.splice(_getFlightIndexById(flight.flightId), 1);
+function deleteFlight(id) {
+  flights.splice(_getFlightIndexById(id), 1);
 }
 
 //search flight by ID
@@ -39,7 +40,7 @@ function _getFlightIndexById(id) {
   if (index > -1) {
     return index;
   } else {
-    throw new Error("FLight not found!");
+    throw new Error("Flight not found!");
   }
 }
 

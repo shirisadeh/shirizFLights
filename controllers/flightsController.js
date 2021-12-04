@@ -10,7 +10,7 @@ Exported functions:
 const DB = require("../data/index.js");
 // req is the object that express create, that represent the request of the user
 
-exports.flightController = {
+exports.flightsController = {
   addNewFlight: (req, res) => {
     try {
       DB.createFlight(req.body);
@@ -44,9 +44,9 @@ exports.flightController = {
       res.status(400).json({ status: "Fail", message: err.message });
     }
   },
-  deleteFLight: (req, res) => {
+  deleteFlight: (req, res) => {
     try {
-      DB.deleteFLight(req.body);
+      DB.deleteFlight(req.params.flightId);
       res.status(200).json({ status: "Success", message: "flight deleted!" });
     } catch (err) {
       res.status(400).json({ status: "Fail", message: err.message });
