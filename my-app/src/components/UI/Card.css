@@ -1,0 +1,16 @@
+.card {
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(226, 226, 231, 0.25);
+}
+
+.button {
+  border-radius: 12px;
+  background-color: #438860;
+  box-shadow: 0 1px 8px rgba(226, 226, 231, 0.25);
+  color: #3a3a3a;
+  font-size: 1rem;
+  margin: 0 1rem;
+  color: rgb(197, 194, 194);
+  font-size: 1.25rem;
+  padding: 0.5rem 1.5rem;
+}
