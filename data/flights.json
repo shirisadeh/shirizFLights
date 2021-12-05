@@ -5,7 +5,6 @@
     "destination": "BKK",
     "origin": "TLV",
     "departure": "2022-01-13T07:00+0200",
-    "duration": 6,
     "cost": "$120"
   },
   {

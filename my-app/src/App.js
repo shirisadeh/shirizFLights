@@ -5,7 +5,7 @@ import NewFlight from "./components/NewFlight/NewFlight";
 
 function App() {
   const [flights, setFlights] = useState([]);
-  //Send an HTTP request
+  //Send an HTTP request to fetch flights.json (Data)
   useEffect(async () => {
     try {
       const response = await fetch("http://localhost:8080/api/flights");
@@ -28,7 +28,7 @@ function App() {
           width="300"
           height="100"
         />
-        <NewFlight />
+        <NewFlight AllFlights={flights} />
         <Flights AllFlights={flights} />
       </header>
     </div>

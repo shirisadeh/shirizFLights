@@ -10,7 +10,7 @@
 import React, { useState } from "react";
 import "./FlightForm.css";
 
-const FlightForm = () => {
+const FlightForm = (props) => {
   //Get From
   const [enteredOrigin, setEnteredOrigin] = useState("");
   const addOrigin = (event) => {
@@ -37,17 +37,32 @@ const FlightForm = () => {
 
   //handle submit, it will reload all the page by default, so i will prevent this reload
   const submitHandler = (event) => {
-    event.preventDefault();
+    //Compute the Max ID for the new added Flight
+    let currId =
+      1 +
+      Math.max.apply(
+        Math,
+        props.flights.map(function (o) {
+          return o.flightId;
+        })
+      );
+
     const flightData = {
-      flightId: "",
-      airplane: "",
+      flightId: currId,
+      airplane: "777-300",
       destination: enteredDestination,
       origin: enteredOrigin,
       departure: new Date(enteredDate),
-      duration: "",
+      duration: 3,
       cost: enteredCost,
     };
     console.log(flightData);
+    fetch("http://localhost:8080/api/flights", {
+      method: "POST",
+      body: JSON.stringify(flightData),
+      headers: { "Content-Type": "application/json" },
+    });
+
     setEnteredOrigin("");
     setEnteredDestination("");
     setEnteredCost("");
@@ -89,5 +104,4 @@ const FlightForm = () => {
     </form>
   );
 };
-
 export default FlightForm;

@@ -1,10 +1,10 @@
 import "./NewFlight.css";
 import FlightForm from "./FlightForm";
 
-const NewFlight = () => {
+const NewFlight = (props) => {
   return (
     <div className="new-flight">
-      <FlightForm />
+      <FlightForm flights={props.AllFlights} />
     </div>
   );
 };
