@@ -5,7 +5,7 @@
     "destination": "BKK",
     "origin": "TLV",
     "departure": "2022-01-13T07:00+0200",
-    "cost": "$120"
+    "cost": "$980"
   },
   {
     "flightId": 2,
@@ -14,7 +14,7 @@
     "origin": "TLV",
     "departure": "2022-03-13T09:00+0200",
     "duration": 12,
-    "cost": "$120"
+    "cost": "$420"
   },
   {
     "flightId": 3,
@@ -32,6 +32,6 @@
     "origin": "TLV",
     "departure": "2022-06-05T22:15+0300",
     "duration": 14,
-    "cost": "$120"
+    "cost": "$654"
   }
 ]

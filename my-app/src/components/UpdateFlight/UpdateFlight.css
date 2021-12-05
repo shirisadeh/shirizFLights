@@ -1,11 +1,12 @@
 .update-button {
   border-radius: 12px;
-  background-color: #1ec061;
+  background-color: #4caf50;
   box-shadow: 0 1px 8px rgba(226, 226, 231, 0.25);
   color: #3a3a3a;
   font-size: 1rem;
   margin: 0 1rem;
-  color: rgb(197, 194, 194);
+  color: rgb(255, 255, 255);
   font-size: 1.25rem;
   padding: 0.5rem 1.5rem;
+  width: 170px;
 }

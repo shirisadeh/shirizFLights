@@ -1,5 +1,5 @@
 .new-flight {
-  background-color: #8f75e6;
+  background-color: rgb(28, 86, 153);
   padding: 1rem;
   margin: 2rem auto;
   width: 50rem;
@@ -13,8 +13,8 @@
   font: inherit;
   cursor: pointer;
   padding: 1rem 2rem;
-  border: 1px solid #40005d;
-  background-color: #40005d;
+  border: 1px solid #02013a;
+  background-color: #0e005d;
   color: white;
   border-radius: 12px;
   margin-right: 1rem;
