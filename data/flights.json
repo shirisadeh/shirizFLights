@@ -5,7 +5,8 @@
     "destination": "BKK",
     "origin": "TLV",
     "departure": "2022-01-13T07:00+0200",
-    "duration": 6
+    "duration": 6,
+    "cost": "$120"
   },
   {
     "flightId": 2,
@@ -13,7 +14,8 @@
     "destination": "JFK",
     "origin": "TLV",
     "departure": "2022-03-13T09:00+0200",
-    "duration": 12
+    "duration": 12,
+    "cost": "$120"
   },
   {
     "flightId": 3,
@@ -21,7 +23,8 @@
     "destination": "FCO",
     "origin": "TLV",
     "departure": "2022-02-05T14:30+0200",
-    "duration": 6
+    "duration": 6,
+    "cost": "$120"
   },
   {
     "flightId": 4,
@@ -29,6 +32,7 @@
     "destination": "MIA",
     "origin": "TLV",
     "departure": "2022-06-05T22:15+0300",
-    "duration": 14
+    "duration": 14,
+    "cost": "$120"
   }
 ]

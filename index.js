@@ -13,6 +13,17 @@ app.use(Express.json());
 // parsing the URL
 app.use(Express.urlencoded({ extended: true }));
 
+//Cors Origin Control - enable the Server to share the data
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  res.set("Content-Type", "application/json");
+  next();
+});
+
 app.get("/", (req, res) => {
   res.json("Welcome to Shiriz server");
 });
