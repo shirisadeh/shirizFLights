@@ -12,6 +12,8 @@ const app = Express();
 const port = 8080;
 
 /*
+middleware - code that run between the starting of the req and the ending of the req
+middleware start from top to bottom
 parsing the body section of the http request
 */
 app.use(Express.json());

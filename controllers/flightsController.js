@@ -8,6 +8,7 @@ Exported functions:
 */
 
 const DB = require("../data/index.js");
+
 // req is the object that express create, that represent the request of the user
 
 exports.flightsController = {
