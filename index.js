@@ -39,6 +39,9 @@ app.get("/", (req, res) => {
   res.json("Welcome to Shiriz server");
 });
 
+/*
+linking the router to this path
+*/
 app.use("/api/flights", flightsRouter);
 
 /*
