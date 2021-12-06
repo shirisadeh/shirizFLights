@@ -54,7 +54,7 @@ const FlightForm = (props) => {
       origin: enteredOrigin,
       departure: new Date(enteredDate),
       duration: 3,
-      cost: enteredCost,
+      cost: "$" + enteredCost,
     };
     console.log(flightData);
     fetch("http://localhost:8080/api/flights", {

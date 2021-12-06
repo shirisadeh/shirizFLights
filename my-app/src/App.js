@@ -26,11 +26,13 @@ function App() {
           className="App-logo"
           alt="logo"
           width="300"
-          height="100"
+          height="10"
         />
+      </header>
+      <body className="App-body">
         <NewFlight AllFlights={flights} />
         <Flights AllFlights={flights} />
-      </header>
+      </body>
     </div>
   );
 }

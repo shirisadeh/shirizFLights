@@ -4,6 +4,11 @@
   gap: 1rem;
   margin-bottom: 1rem;
   text-align: left;
+  width: 100%;
+  height: 100px;
+  margin: auto;
+  position: relative;
+  font-size: 20px;
 }
 
 .new-flight__control label {
@@ -14,13 +19,16 @@
 
 .new-flight__control input {
   font: inherit;
+  font-size: 15px;
   padding: 0.5rem;
   border-radius: 6px;
   border: 1px solid rgb(153, 126, 126);
-  width: 20rem;
+  width: 10rem;
   max-width: 100%;
+  height: 25px;
 }
 
 .new-flight__actions {
   text-align: right;
+  font-size: 20px;
 }
