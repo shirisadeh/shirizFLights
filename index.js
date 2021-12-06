@@ -1,19 +1,29 @@
-//importing express from express
+/*
+importing express from express
+create the express server - require the express library
+*/
 const Express = require("express");
 const { flightsRouter } = require("./routers/flightsRouter");
 
-// init the express app
+/*
+init the express app - calling this express function to set up the server
+*/
 const app = Express();
-
 const port = 8080;
 
-// parsing the body section of the http request
+/*
+parsing the body section of the http request
+*/
 app.use(Express.json());
 
-// parsing the URL
+/*
+parsing the URL
+*/
 app.use(Express.urlencoded({ extended: true }));
 
-//Cors Origin Control - enable the Server to share the data
+/*
+Cors Origin Control - enable the Server to share the data
+*/
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
@@ -31,4 +41,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/flights", flightsRouter);
 
+/*
+listening on port 8080 for request
+*/
 app.listen(port, () => console.log(`Server is listening on port ${port}`));

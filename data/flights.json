@@ -33,5 +33,14 @@
     "departure": "2022-06-05T22:15+0300",
     "duration": 14,
     "cost": "$654"
+  },
+  {
+    "flightId": 5,
+    "airplane": "777-300",
+    "destination": "LAX",
+    "origin": "TLV",
+    "departure": "2022-09-05T22:15+0300",
+    "duration": 14,
+    "cost": "$709"
   }
 ]
