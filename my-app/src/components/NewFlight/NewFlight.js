@@ -4,6 +4,7 @@ import FlightForm from "./FlightForm";
 
 const NewFlight = (props) => {
   const [isEditing, setIsEditing] = useState(false);
+
   const saveNewFlightData = (enteredNewFlightData) => {
     //Compute the Max ID for the new added Flight
     let currId =
@@ -25,6 +26,7 @@ const NewFlight = (props) => {
       headers: { "Content-Type": "application/json" },
     });
     stopEditing();
+    window.location.reload(false);
   };
 
   const stopEditing = () => {
