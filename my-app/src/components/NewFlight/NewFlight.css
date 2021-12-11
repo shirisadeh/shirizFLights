@@ -22,12 +22,12 @@
 
 .new-flight button:hover,
 .new-flight button:active {
-  background-color: #510674;
-  border-color: #510674;
+  background-color: #033d74;
+  border-color: #000000;
 }
 
 .new-flight button.alternative {
-  color: #220131;
+  color: #ebebeb;
   border-color: transparent;
   background-color: transparent;
 }

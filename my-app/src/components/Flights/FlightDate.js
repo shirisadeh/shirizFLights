@@ -2,7 +2,6 @@ import "./FLightDate.css";
 
 function FlightDate(props) {
   const currDate = new Date(props.date);
-  console.log(currDate);
 
   const month = currDate.toLocaleString("en-US", {
     month: "long",

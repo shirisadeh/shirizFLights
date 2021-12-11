@@ -35,20 +35,9 @@ const FlightForm = (props) => {
     setEnteredDate(event.target.value);
   };
 
-  //handle submit, it will reload all the page by default, so i will prevent this reload
+  //handle submit
   const submitHandler = (event) => {
-    //Compute the Max ID for the new added Flight
-    let currId =
-      1 +
-      Math.max.apply(
-        Math,
-        props.flights.map(function (o) {
-          return o.flightId;
-        })
-      );
-
-    const flightData = {
-      flightId: currId,
+    const enteredNewFlightData = {
       airplane: "777-300",
       destination: enteredDestination,
       origin: enteredOrigin,
@@ -56,13 +45,7 @@ const FlightForm = (props) => {
       duration: 3,
       cost: "$" + enteredCost,
     };
-    console.log(flightData);
-    fetch("http://localhost:8080/api/flights", {
-      method: "POST",
-      body: JSON.stringify(flightData),
-      headers: { "Content-Type": "application/json" },
-    });
-
+    props.onSaveNewFlight(enteredNewFlightData);
     setEnteredOrigin("");
     setEnteredDestination("");
     setEnteredCost("");
@@ -73,13 +56,21 @@ const FlightForm = (props) => {
       <div className="new-flight__controls">
         <div className="new-flight__control">
           <label>From:</label>
-          <input type="text" value={enteredOrigin} onChange={addOrigin} />
+          <input
+            type="text"
+            value={enteredOrigin}
+            minlength="3"
+            maxlength="3"
+            onChange={addOrigin}
+          />
         </div>
         <div className="new-flight__control">
           <label>To:</label>
           <input
             type="text"
             value={enteredDestination}
+            minlength="3"
+            maxlength="3"
             onChange={addDestination}
           />
         </div>
@@ -99,6 +90,9 @@ const FlightForm = (props) => {
         </div>
       </div>
       <div className="new-flight__actions">
+        <button type="button" onClick={props.onCancel}>
+          Cancel
+        </button>
         <button type="submit">Add Flight</button>
       </div>
     </form>
